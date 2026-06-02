@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VPN UpDown Monitor</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>VPN UpDown Monitor</h1>
+      <p>Мониторинг Xray + Reality и AmneziaWG</p>
+      <button id="refreshButton">Обновить сейчас</button>
+    </header>
+
+    <section class="grid">
+      <article class="card" id="xrayCard">
+        <h2>Xray + Reality</h2>
+        <p class="status" id="xrayStatus">Проверка...</p>
+        <div class="metrics">
+          <div><span>Скачивание</span><strong id="xrayDownload">-</strong></div>
+          <div><span>Отдача</span><strong id="xrayUpload">-</strong></div>
+          <div><span>Пинг</span><strong id="xrayPing">-</strong></div>
+          <div><span>Потери</span><strong id="xrayLoss">-</strong></div>
+        </div>
+        <canvas id="xrayChart"></canvas>
+      </article>
+
+      <article class="card" id="awgCard">
+        <h2>AmneziaWG</h2>
+        <p class="status" id="awgStatus">Проверка...</p>
+        <div class="metrics">
+          <div><span>Скачивание</span><strong id="awgDownload">-</strong></div>
+          <div><span>Отдача</span><strong id="awgUpload">-</strong></div>
+          <div><span>Пинг</span><strong id="awgPing">-</strong></div>
+          <div><span>Потери</span><strong id="awgLoss">-</strong></div>
+        </div>
+        <canvas id="awgChart"></canvas>
+      </article>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
